@@ -1,0 +1,86 @@
+<!-- Page Layout here -->
+<div class="row layout-row">
+
+    <div class="col s1 left-layout blue-grey darken-4">
+
+        <ul class="social-icons">
+            <li
+                    *ngFor="let app of apps"
+                    class="{{ app.name | lowercase }}"
+                    title="{{ app.name | uppercase }}"
+                    (click)="openApp(app.name)"
+            >
+                <img src="dist/images/icon/{{ app.icon }}" alt="" width="40">
+            </li>
+
+            <!--<li class="twitter" title="Twitter">-->
+                <!--<img src="dist/images/icon/twitter.png" alt="" width="40">-->
+            <!--</li>-->
+
+            <!--<li class="youtube" title="Youtube">-->
+                <!--<img src="dist/images/icon/youtube.png" alt="" width="40">-->
+            <!--</li>-->
+
+            <!--<li class="linkedin" title="Linkedin">-->
+                <!--<img src="dist/images/icon/linkedin.png" alt="" width="40">-->
+            <!--</li>-->
+
+            <!--<li class="pinterest" title="Pinterest">-->
+                <!--<img src="dist/images/icon/pinterest.png" alt="" width="40">-->
+            <!--</li>-->
+
+            <!--<li class="google-plus" title="Google+">-->
+                <!--<img src="dist/images/icon/google-plus.png" alt="" width="40">-->
+            <!--</li>-->
+
+            <!--<li class="tumblr" title="Tumblr">-->
+                <!--<img src="dist/images/icon/tumblr.png" alt="" width="40">-->
+            <!--</li>-->
+
+            <!--<li class="instagram" title="Instagram">-->
+                <!--<img src="dist/images/icon/instagram.png" alt="" width="40">-->
+            <!--</li>-->
+
+            <!--<li class="reddit" title="Reddit">-->
+                <!--<img src="dist/images/icon/reddit.png" alt="" width="40">-->
+            <!--</li>-->
+
+            <!--<li class="vk" title="VK">-->
+                <!--<img src="dist/images/icon/vk.png" alt="" width="40">-->
+            <!--</li>-->
+
+            <!--<li class="flickr" title="Flickr">-->
+                <!--<img src="dist/images/icon/flickr.png" alt="" width="40">-->
+            <!--</li>-->
+
+            <!--<li class="vine" title="Vine">-->
+                <!--<img src="dist/images/icon/vine.png" alt="" width="40">-->
+            <!--</li>-->
+
+            <!--<li class="meetup" title="Meetup">-->
+                <!--<img src="dist/images/icon/meetup.png" alt="" width="40">-->
+            <!--</li>-->
+
+            <!--<li class="ask-fm" title="Ask.FM">-->
+                <!--<img src="dist/images/icon/ask-fm.png" alt="" width="40">-->
+            <!--</li>-->
+
+            <!--<li class="classmates" title="ClassMates">-->
+                <!--<img src="dist/images/icon/classmates.png" alt="" width="40">-->
+            <!--</li>-->
+        </ul>
+
+    </div>
+
+    <div class="col s11 right-layout blue-grey lighten-3 center">
+        <div class="placeholder">
+            <h3>
+                Welcome to <span class="blue-grey-text"><b>Social Life</b></span>
+            </h3>
+            <p>
+                Social fun just got better...
+            </p>
+        </div>
+    </div>
+
+</div>
