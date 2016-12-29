@@ -81,3 +81,59 @@ img#appIcon {
 {
     height: 100%;
 }
+
+
+#loader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fefefe;
+    height: 100%;
+    z-index: 200;
+}
+
+.loader-spinner {
+    width: 128px;
+    height: 128px;
+    position: absolute;
+    background-image: url('../images/logo.png');
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom:0;
+    margin: auto;
+    /*border: 3px solid rgba(226, 226, 226, 0.75);*/
+    /*border-radius: 100%;*/
+    /*animation: rotation 1s infinite linear;*/
+    -webkit-animation-name: spin;
+    -webkit-animation-duration: 1000ms;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+}
+
+.loader-spinner:before {
+    content: "";
+    display: block;
+    position: absolute;
+    /*left: -3px;*/
+    /*top: -3px;*/
+    /*height: 50px;*/
+    /*width: 50px;*/
+    /*border-top: 3px solid #FE7E17;*/
+    /*border-left: 3px solid #FE7E17;*/
+    /*border-bottom: 3px solid transparent;*/
+    /*border-right: 3px solid #FE7E17;*/
+    /*border-radius: 100%;*/
+}
+
+@-webkit-keyframes spin {
+    from {
+        -webkit-transform:rotate(0deg);
+    }
+
+    to {
+        -webkit-transform:rotate(360deg);
+    }
+}
