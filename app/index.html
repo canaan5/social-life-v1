@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <title>Social Life</title>
+
+  <!--Import Google Icon Font-->
+  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link type="text/css" rel="stylesheet" href="dist/css/materialize.min.css"  media="screen,projection"/>
+
+    <!-- Main Style-->
+    <link rel="stylesheet" href="dist/css/style.css">
+
+    <!-- Polyfill(s) for older browsers -->
+    <script src="dist/node_modules/core-js/client/shim.min.js"></script>
+
+    <script src="dist/node_modules/zone.js/dist/zone.js"></script>
+    <script src="dist/node_modules/reflect-metadata/Reflect.js"></script>
+    <script src="dist/node_modules/systemjs/dist/system.src.js"></script>
+
+    <script src="dist/systemjs.config.js"></script>
+
+    <script>
+        System.import('app').catch(function(err){ console.error(err); });
+    </script>
+</head>
+
+<body>
+
+<social-life></social-life>
+
+<!--Import jQuery before materialize.js-->
+<script type="text/javascript" src="dist/js/jquery-3.1.1.min.js" onload="window.$ = window.jQuery = module.exports;"></script>
+
+<script type="text/javascript" src="dist/js/hammer.min.js" onload="window.Hammer = module.exports;"></script>
+<script type="text/javascript" src="dist/js/materialize.min.js"></script>
+</body>
+
+<script>
+  // You can also require other files to run in this process
+  require('./renderer.js')
+</script>
+</html>

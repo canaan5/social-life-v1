@@ -1,11 +1,11 @@
 {
-  "name": "social-life",
-  "version": "1.0.0",
-  "description": "All your social app in one place",
   "main": "main.js",
   "scripts": {
-    "start": "electron .",
-    "watch": "tsc && concurrently \"tsc -w\" "
+    "start": "electron ./app",
+    "watch": "tsc && concurrently \"tsc -w\" ",
+    "pack": "build --dir",
+    "dist": "build",
+    "postinstall": "install-app-deps"
   },
   "repository": "https://github.com/canaan5/social-life",
   "keywords": [
@@ -54,5 +54,17 @@
     "rxjs": "5.0.1",
     "systemjs": "0.19.40",
     "zone.js": "^0.7.4"
+  },
+  "build": {
+    "appId": "com.canaane.sociallife",
+    "mac": {
+      "category": "com.canaane.sociallife"
+    },
+    "win": {
+      "iconUrl": "(windows-only) https link to icon"
+    },
+    "nsis": {
+      "runAfterFinish": false
+    }
   }
 }

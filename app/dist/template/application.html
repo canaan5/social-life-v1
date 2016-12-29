@@ -1,0 +1,48 @@
+<!-- Page Layout here -->
+<div class="row layout-row">
+
+    <div class="col s1 left-layout blue-grey darken-4">
+
+        <ul class="social-icons">
+            <li
+                    *ngFor="let app of apps"
+                    class="{{ app.name | lowercase }}"
+                    title="{{ app.name | uppercase }}"
+                    (click)="openApp(app)"
+            >
+                <img id="appIcon" src="dist/images/icon/{{ app.icon }}" alt="">
+            </li>
+        </ul>
+
+    </div>
+
+    <div class="col s11 right-layout blue-grey lighten-3 center">
+        <div
+                *ngIf="!appActive"
+                class="placeholder">
+
+            <!--LOGO-->
+            <div id="logo" class="blue-grey">
+                <h2>SL</h2>
+            </div>
+
+            <h3>
+                Welcome to <span class="blue-grey-text"><b>Social Life</b></span>
+            </h3>
+            <p>
+                Social fun just got better...
+                {{ activeApp }}
+            </p>
+        </div>
+
+        <div class="app-view-wrapper" *ngIf="appActive">
+
+                <webview
+                        id="app-view" class="app-view-{{ activeApp }}"
+                        src="{{ appUrl }}">
+                </webview>
+
+        </div>
+    </div>
+
+</div>
