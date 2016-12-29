@@ -2,6 +2,15 @@
 A cross platform application that bring together your favourite social application.
 
 ### Download
-Windows 32bit []()
+**Windows 32bit [social-life_1.0.0_win32.exe]()**
+**Windows 64bit [social-life_1.0.0_win64.exe]()**
+
+**Linux (64bit only) [social-life-linux64.deb]()**
+
+** Mac OSX coming soon... **
+
 ### Installation
+1.  Download for your platform and architect.
+2.  Install.
+3.  Launch the application from your desktop and you are good to go.
  
