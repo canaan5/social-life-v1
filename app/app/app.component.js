@@ -11,10 +11,35 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var AppComponent = (function () {
     function AppComponent() {
+        /**
+         * check if any app is activated
+         * @type {boolean}
+         */
         this.appActive = false;
+        /**
+         * name of active app
+         * @type {string}
+         */
         this.activeApp = '';
-        this.appUrl = 'http://www.google.com';
+        /**
+         * address of app to load
+         * @type {string}
+         */
+        this.appUrl = '';
+        /**
+         * activated apps
+         * @type {Array}
+         */
         this.activatedApps = [];
+        /**
+         * indicate that a request is in progress
+         * @type {boolean}
+         */
+        this.loading = false;
+        /**
+         * all apps
+         * @type {{name: string, icon: string, url: string}[]}
+         */
         this.apps = [
             { 'name': 'Facebook', 'icon': 'fb.png', 'url': 'https://www.facebook.com' },
             { 'name': 'Twitter', 'icon': 'twitter.png', 'url': 'https://www.twitter.com' },
@@ -33,8 +58,23 @@ var AppComponent = (function () {
             { 'name': 'classmates', 'icon': 'classmates.png', 'url': 'http://www.classmates.com' },
         ];
     }
+    /**
+     * display app when clicked
+     * @param app {object}
+     * @returns {boolean}
+     */
     AppComponent.prototype.openApp = function (app) {
+        var _this = this;
         var webview = document.getElementById('app-view');
+        // indicate request by displaying loading on top of the app icon
+        if (webview != null) {
+            webview.addEventListener('did-start-loading', function () {
+                _this.loading = true;
+            });
+            webview.addEventListener('did-stop-loading', function () {
+                _this.loading = false;
+            });
+        }
         if (this.appActive && this.activeApp != app.name) {
             localStorage.setItem(this.activeApp, webview.getURL());
             this.appUrl = (localStorage.getItem(app.name) === null) ? app.url : localStorage.getItem(app.name);

@@ -4,12 +4,22 @@
     <div class="col s1 left-layout blue-grey darken-4">
 
         <ul class="social-icons">
+
+            <!--<div class="app-preloader-wrapper">-->
+                <!--<div class="app-preloader-spinner"></div>-->
+            <!--</div>-->
+
             <li
                     *ngFor="let app of apps"
                     class="{{ app.name | lowercase }}"
                     title="{{ app.name | uppercase }}"
                     (click)="openApp(app)"
             >
+                <span class="app-preloader-wrapper"
+                *ngIf="loading && activeApp == app.name">
+                    <div class="app-preloader-spinner"></div>
+                </span>
+
                 <img id="appIcon" src="dist/images/icon/{{ app.icon }}" alt="">
             </li>
         </ul>
@@ -37,10 +47,10 @@
 
         <div class="app-view-wrapper" *ngIf="appActive">
 
-                <webview
-                        id="app-view" class="app-view-{{ activeApp }}"
-                        src="{{ appUrl }}">
-                </webview>
+            <webview
+                    id="app-view" class="app-view-{{ activeApp }}"
+                    src="{{ appUrl }}">
+            </webview>
 
         </div>
     </div>
