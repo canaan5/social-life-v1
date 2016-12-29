@@ -7,7 +7,7 @@ A cross platform application that bring together your favourite social applicati
 
 **Linux (64bit only) [social-life-linux64.deb]()**
 
-** Mac OSX coming soon... **
+**Mac OSX coming soon...**
 
 ### Installation
 1.  Download for your platform and architect.
