@@ -25,8 +25,6 @@
     "canonical-path": "0.0.2",
     "concurrently": "^3.1.0",
     "electron": "^1.4.1",
-    "gulp": "^3.9.1",
-    "gulp-typescript": "^3.1.3",
     "http-server": "^0.9.0",
     "jasmine-core": "~2.4.1",
     "karma": "^1.3.0",
@@ -51,10 +49,10 @@
     "@angular/platform-browser-dynamic": "~2.4.0",
     "@angular/router": "~3.4.0",
     "angular-in-memory-web-api": "~0.2.2",
-    "systemjs": "0.19.40",
     "core-js": "^2.4.1",
     "reflect-metadata": "^0.1.8",
     "rxjs": "5.0.1",
+    "systemjs": "0.19.40",
     "zone.js": "^0.7.4"
   }
 }

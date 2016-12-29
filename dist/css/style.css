@@ -2,6 +2,42 @@ html, body {
     height: 100%;
 }
 
+#logo {
+    height: 90px;
+    width: 90px;
+    margin-left: auto;
+    margin-right: auto;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    z-index: 10;
+}
+
+#logo h2 {
+    color: #fff;
+    font-weight: bolder;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    margin: 0;
+    padding: 0;
+    position: relative;
+    top: 15%;
+}
+
+img#appIcon {
+    width: 90%;
+}
+
+.social-icons li {
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
 .layout-row {
     height: 100%;
     margin-bottom: 0;
@@ -15,21 +51,17 @@ html, body {
 
 .right-layout {
     height: 100%;
+    padding: 0 !important;
     width: 95.6666666667% !important;
 }
 
 .placeholder {
     position: relative;
-    top: 40%;
+    top: 35%;
 }
 
 .social-icons {
     text-align: center;
-}
-
-.social-icons li {
-    margin-bottom: 10px;
-    cursor: pointer;
 }
 
 .social-icons li img {
@@ -38,4 +70,14 @@ html, body {
 
 .social-icons li:hover > img {
     transform: scale(1.3);
+}
+
+.app-view-wrapper {
+    height: 100%;
+    overflow: hidden;
+}
+
+#app-view
+{
+    height: 100%;
 }

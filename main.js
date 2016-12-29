@@ -14,7 +14,8 @@ let mainWindow;
 function createWindow () {
   // Create the browser window.
   mainWindow = new BrowserWindow({
-    width: 1280, height: 720
+    width: 1280,
+    height: 720
   });
 
   // and load the index.html of the app.
@@ -26,7 +27,6 @@ function createWindow () {
 
   // Open the DevTools.
   mainWindow.webContents.openDevTools();
-
   // Emitted when the window is closed.
   mainWindow.on('closed', function () {
     // Dereference the window object, usually you would store windows
@@ -48,7 +48,7 @@ app.on('window-all-closed', function () {
   if (process.platform !== 'darwin') {
     app.quit();
   }
-})
+});
 
 app.on('activate', function () {
   // On OS X it's common to re-create a window in the app when the
