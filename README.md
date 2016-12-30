@@ -10,7 +10,7 @@ A cross platform application that bring together your favourite social applicati
 **Mac OSX coming soon...**
 
 ### Installation
-1.  Download for your platform and architect.
+1.  Download for your platform and system architecture.
 2.  Install.
 3.  Launch the application from your desktop and you are good to go.
 
