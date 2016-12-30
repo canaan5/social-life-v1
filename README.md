@@ -2,8 +2,8 @@
 A cross platform application that bring together your favourite social application.
 
 ### Download
-**Windows 32bit [social-life_1.0.0_win32.exe](http://54.161.117.152/social-life_1.0.0_win32.exe)** <br/>
-**Windows 64bit [social-life_1.0.0_win64.exe](http://54.161.117.152/social-life_1.0.0_win64.exe)**
+**Windows 32bit [social-life_1.0.0-beta.2-x86.exe](http://54.161.117.152/social-life/download.php?platform=Win&id=2&arch=x86)** <br/>
+**Windows 64bit [social-life_1.0.0-beta.2-x64.exe](http://54.161.117.152/social-life/download.php?platform=Win&id=3&arch=x86)**
 
 **Linux (64bit only) [social-life_1.0.0-beta.2_amd64.deb](http://54.161.117.152/social-life/download.php?platform=Linux&id=1&arch=x64)**
 
