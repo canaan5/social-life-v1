@@ -10,6 +10,10 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var AppComponent = (function () {
+    /**
+     * class constructor
+     *
+     */
     function AppComponent() {
         /**
          * check if any app is activated
@@ -21,6 +25,11 @@ var AppComponent = (function () {
          * @type {string}
          */
         this.activeApp = '';
+        /**
+         * Active app home url
+         * @type {string}
+         */
+        this.activeAppHomeUrl = '';
         /**
          * address of app to load
          * @type {string}
@@ -57,6 +66,11 @@ var AppComponent = (function () {
             { 'name': 'ask-fm', 'icon': 'ask-fm.png', 'url': 'http://ask.fm' },
             { 'name': 'classmates', 'icon': 'classmates.png', 'url': 'http://www.classmates.com' },
         ];
+        var $this = this;
+        document.addEventListener('current-app-home', function () {
+            $this.appUrl = $this.activeAppHomeUrl;
+            $this.appActive = true;
+        });
     }
     /**
      * display app when clicked
@@ -75,16 +89,16 @@ var AppComponent = (function () {
                 _this.loading = false;
             });
         }
+        this.activeAppHomeUrl = app.url;
+        this.activeApp = app.name;
+        this.appActive = true;
         if (this.appActive && this.activeApp != app.name) {
             localStorage.setItem(this.activeApp, webview.getURL());
             this.appUrl = (localStorage.getItem(app.name) === null) ? app.url : localStorage.getItem(app.name);
-            this.activeApp = app.name;
-            this.appActive = true;
             return true;
         }
         this.appUrl = (localStorage.getItem(app.name) === null) ? app.url : localStorage.getItem(app.name);
-        this.activeApp = app.name;
-        this.appActive = true;
+        return;
     };
     AppComponent = __decorate([
         core_1.Component({

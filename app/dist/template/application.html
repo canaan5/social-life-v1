@@ -41,13 +41,14 @@
             </h3>
             <p>
                 Social fun just got better...
-                {{ activeApp }}
+                <a href="http://www.google.com" target="_blank">Hello</a>
             </p>
         </div>
 
         <div class="app-view-wrapper" *ngIf="appActive">
 
             <webview
+                    preload="./context.js"
                     id="app-view" class="app-view-{{ activeApp }}"
                     src="{{ appUrl }}">
             </webview>
