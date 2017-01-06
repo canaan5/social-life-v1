@@ -6,7 +6,9 @@ const {remote} = require('electron');
 const {Menu, MenuItem} = remote;
 const {ipcMain} = remote;
 
-ipcMain.removeAllListeners(['open-in-new-window']);
+
+// Context menu
+    ipcMain.removeAllListeners(['open-in-new-window']);
 ipcMain.removeAllListeners(['app-home']);
 
 ipcMain.on('app-home', (event) => {
@@ -22,9 +24,4 @@ ipcMain.on('open-in-new-window', (event, link) => {
     win.on('closed', () => {
         win = null
     })
-});
-
-
-ipcMain.on('click-event', (event, data) => {
-    console.log(data);
 });

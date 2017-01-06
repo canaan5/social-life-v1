@@ -29,8 +29,3 @@ window.addEventListener('contextmenu', (e) => {
     }
 
 }, false);
-
-document.addEventListener('click', function(e) {
-    ipcRenderer.send('click-event', e.target);
-    return false;
-});

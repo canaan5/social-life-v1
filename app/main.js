@@ -1,6 +1,13 @@
 const electron = require('electron');
 // Module to control application life.
 const app = electron.app;
+
+// Module to control app menu
+const Menu = electron.Menu;
+
+// Module to control app Shell
+const shell = electron.shell;
+
 // Module to create native browser window.
 const BrowserWindow = electron.BrowserWindow;
 
@@ -26,7 +33,7 @@ function createWindow () {
   }));
 
   // Open the DevTools.
-  mainWindow.webContents.openDevTools();
+  // mainWindow.webContents.openDevTools();
   // Emitted when the window is closed.
   mainWindow.on('closed', function () {
     // Dereference the window object, usually you would store windows
@@ -60,3 +67,36 @@ app.on('activate', function () {
 
 // In this file you can include the rest of your app's specific main process
 // code. You can also put them in separate files and require them here.
+const template = [
+  {
+    label: 'File',
+    submenu: [
+      {
+        label: 'Exit',
+        click() { app.exit() }
+      }
+    ]
+  },
+  {
+    label: 'Action',
+    submenu: [
+      {
+        label: 'Clear App Data',
+        click() {
+          let dataPath = app.getPath('userData');
+          shell.moveItemToTrash(dataPath);
+
+          app.relaunch({args: process.argv.slice(1).concat(['--relaunch'])});
+          app.exit(0);
+        }
+      },
+      {
+        label: 'Reload Application',
+        click() { mainWindow.reload() }
+      }
+    ]
+  }
+];
+
+const menu = Menu.buildFromTemplate(template);
+Menu.setApplicationMenu(menu);
