@@ -90,11 +90,14 @@ var AppComponent = (function () {
             });
         }
         this.activeAppHomeUrl = app.url;
-        this.activeApp = app.name;
         this.appActive = true;
+        if (this.activeApp == '') {
+            this.activeApp = app.name;
+        }
         if (this.appActive && this.activeApp != app.name) {
             localStorage.setItem(this.activeApp, webview.getURL());
             this.appUrl = (localStorage.getItem(app.name) === null) ? app.url : localStorage.getItem(app.name);
+            this.activeApp = app.name;
             return true;
         }
         this.appUrl = (localStorage.getItem(app.name) === null) ? app.url : localStorage.getItem(app.name);
