@@ -2,10 +2,11 @@
 A cross platform application that bring together your favourite social application.
 
 ### Download
-**Windows 32bit [social-life Setup 1.0.0-beta.5-x86.exe](http://54.209.126.56/social-life/download.php?platform=Win&id=6&arch=x86)** <br/>
-**Windows 64bit [social-life Setup 1.0.0-beta.5-x64.exe](http://54.209.126.56/social-life/download.php?platform=Win&id=5&arch=x64)**
+##### Version 1.0.0-beta.8
+**Windows 32bit [social-life Setup 1.0.0-beta.8-x86.exe](http://54.209.126.56/social-life/download.php?platform=Win&id=9&arch=x86)** <br/>
+**Windows 64bit [social-life Setup 1.0.0-beta.8-x64.exe](http://54.209.126.56/social-life/download.php?platform=Win&id=8&arch=x64)**
 
-**Linux (64bit only) [social-life_1.0.0-beta.5_amd64.deb](http://54.209.126.56/social-life/download.php?platform=Linux&id=4&arch=x64)**
+**Linux (64bit only) [social-life_1.0.0-beta.8_amd64.deb](http://54.209.126.56/social-life/download.php?platform=Linux&id=7&arch=x64)**
 
 **Mac OSX coming soon...**
 
