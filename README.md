@@ -2,7 +2,9 @@
 A cross platform application that bring together your favourite social application.
 
 ### Download
+
 ##### Version 1.0.0-beta.8
+
 **Windows 32bit [social-life Setup 1.0.0-beta.8-x86.exe](http://54.209.126.56/social-life/download.php?platform=Win&id=9&arch=x86)** <br/>
 **Windows 64bit [social-life Setup 1.0.0-beta.8-x64.exe](http://54.209.126.56/social-life/download.php?platform=Win&id=8&arch=x64)**
 
